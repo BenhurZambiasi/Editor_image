@@ -9,6 +9,15 @@ export default defineConfig({
     VitePWA({
       manifest,
       registerType: "autoUpdate",
+      includeAssets: [
+        "favicon.svg",
+        "favicon.ico",
+        "robots.txt",
+        "apple-touch-icon.png",
+      ],
+      workbox: {
+        globPatterns: ["**/*.{js,css,html}", "**/*.{svg,png,jpg,gif}"],
+      },
     }),
   ],
 });

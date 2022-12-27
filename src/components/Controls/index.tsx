@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useRef } from "react";
+import React, { ChangeEvent } from "react";
 import { useEditor } from "../../context/editorContext";
 
 export const Controls: React.FC = () => {

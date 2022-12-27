@@ -82,6 +82,7 @@ export const EditorPainel: React.FC = () => {
             <p className="value">{filtersList[idActived].value}%</p>
           </div>
           <input
+            title="range"
             type="range"
             value={filtersList[idActived].value}
             min="0"
@@ -93,19 +94,29 @@ export const EditorPainel: React.FC = () => {
       <div className="rotate">
         <label className="title">Rotate & Flip</label>
         <div className="options">
-          <button id="-90" name="rotate" onClick={handleClickRotateFlip}>
+          <button
+            id="-90"
+            name="rotate"
+            onClick={handleClickRotateFlip}
+            title="desfazer">
             <FaUndo />
           </button>
-          <button id="90" name="rotate" onClick={handleClickRotateFlip}>
+          <button
+            id="90"
+            name="rotate"
+            onClick={handleClickRotateFlip}
+            title="refazer">
             <FaRedo />
           </button>
           <button
+            title="horizontal"
             id="horizontal"
             name="flipHorizontal"
             onClick={handleClickRotateFlip}>
             <MdOutlineVerticalAlignCenter />
           </button>
           <button
+            title="vertical"
             id="vertical"
             name="flipVertical"
             onClick={handleClickRotateFlip}>
